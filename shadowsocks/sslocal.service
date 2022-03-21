@@ -1,0 +1,10 @@
+[Unit]
+Description=My test service
+After=multi-user.target
+[Service]
+Type=simple
+Restart=always
+RuntimeMaxSec=1200
+ExecStart=ss-local -c /home/ubuntu/uc.json
+[Install]
+WantedBy=multi-user.target
